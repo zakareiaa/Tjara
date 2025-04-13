@@ -73,3 +73,27 @@ Follow these instructions to get the project up and running on your local machin
 3. **Environment Setup**
    ```bash
    cp .env.example .env
+
+## 🛠 Available Scripts
+
+Run these commands from the project directory:
+
+| Command         | Description                                 |
+|-----------------|---------------------------------------------|
+| `npm run dev`   | Starts development server                   |
+| `npm start`     | Alternative for development server          |
+| `npm run build` | Creates production build                    |
+
+## 🏃 Running the Development Server
+
+To start the development server with hot reloading:
+
+```bash
+npm run dev
+
+
+Note: 
+1. Make sure there's an empty line before and after code blocks (the lines with ```)
+2. The table uses proper markdown pipe syntax
+3. Code commands are properly formatted with backticks
+4. The URL is properly linked with markdown syntax
