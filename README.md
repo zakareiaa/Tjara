@@ -49,15 +49,27 @@
 
 ---
 
-## 📦 Getting Started
+## 🚀 Getting Started
 
-> Coming soon: setup instructions, installation guide, and environment configuration.
+Follow these instructions to get the project up and running on your local machine.
 
----
+### 📋 Prerequisites
+- Node.js (version 14.x or higher)
+- npm (comes with Node.js) or yarn
 
-## 🤝 License
+### ⚙️ Installation
 
-This project is licensed under your preferred license. Add it here.
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/your-username/your-repo.git
+   cd your-project-folder
 
----
+2. **Install dependencies**
+   ```bash
+    npm install
+    or if using yarn:
+    yarn install
 
+3. **Environment Setup**
+   ```bash
+   cp .env.example .env
