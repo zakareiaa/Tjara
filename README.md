@@ -67,7 +67,7 @@ Follow these instructions to get the project up and running on your local machin
 2. **Install dependencies**
    ```bash
     npm install
-    or if using yarn:
+    // or if using yarn:
     yarn install
 
 3. **Environment Setup**
