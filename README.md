@@ -88,12 +88,5 @@ Run these commands from the project directory:
 
 To start the development server with hot reloading:
 
-```bash
-npm run dev
-
-
-Note: 
-1. Make sure there's an empty line before and after code blocks (the lines with ```)
-2. The table uses proper markdown pipe syntax
-3. Code commands are properly formatted with backticks
-4. The URL is properly linked with markdown syntax
+  ```bash
+  npm run dev
