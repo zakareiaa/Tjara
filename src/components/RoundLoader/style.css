@@ -1,0 +1,11 @@
+.loadingAnimGif {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 130px;
+}
+
+.loadingAnimGif img {
+    width: 60px;
+}

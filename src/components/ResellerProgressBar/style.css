@@ -1,0 +1,110 @@
+.cart-section .reseller-progress .reseller-progress-container {
+  background: #ffffff;
+  border: 1px solid #eaeaea;
+  border-radius: 8px;
+  padding: 20px 30px;
+  margin: 20px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05);
+}
+
+.cart-section .reseller-progress .reseller-progress-title {
+  margin: 0 0 12px 0;
+  font-weight: 800;
+  font-size: 28px;
+  line-height: 34.36px;
+  color: #374856;
+}
+
+.cart-section .reseller-progress .reseller-progress-bar-container {
+  position: relative;
+  margin-bottom: 60px;
+}
+
+.cart-section .reseller-progress .reseller-level-markers {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 40px;
+}
+
+.cart-section .reseller-progress .reseller-level-marker {
+  position: absolute;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 60px;
+}
+
+.cart-section .reseller-progress .reseller-marker-dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background-color: #e0e0e0;
+  margin-bottom: 8px;
+}
+
+.cart-section .reseller-progress .reseller-marker-dot.active {
+  background-color: var(--main-red-color); /* Change this to match your theme color */
+}
+
+.cart-section .reseller-progress .reseller-marker-amount {
+  font-size: 14px;
+  color: #666666;
+  margin-bottom: 4px;
+  white-space: nowrap;
+}
+
+.cart-section .reseller-progress .reseller-marker-discount {
+  font-size: 12px;
+  color: #888888;
+  white-space: nowrap;
+}
+
+.cart-section .reseller-progress .reseller-progress-track {
+  height: 12px;
+  background-color: #f0f0f0;
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.cart-section .reseller-progress .reseller-progress-fill {
+  height: 100%;
+  background-color: var(--main-red-color); /* Change this to match your theme color */
+  transition: width 0.5s ease;
+}
+
+.cart-section .reseller-progress .reseller-status-message {
+  text-align: center;
+  font-size: 20px;
+  color: #666666;
+  margin-top: 16px;
+}
+
+.cart-section .reseller-progress .reseller-highlight-amount {
+  color: var(--main-red-color); /* Change this to match your theme color */
+  font-weight: 600;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .cart-section .reseller-progress .reseller-progress-container {
+    padding: 15px;
+    margin: 15px 0;
+  }
+
+  .cart-section .reseller-progress .reseller-progress-title {
+    font-size: 14px;
+    margin-bottom: 15px;
+  }
+
+  .cart-section .reseller-progress .reseller-level-marker {
+    width: 50px;
+  }
+
+  .cart-section .reseller-progress .reseller-marker-amount,
+  .cart-section .reseller-progress .reseller-marker-discount {
+    font-size: 10px;
+  }
+}

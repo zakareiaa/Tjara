@@ -1,0 +1,56 @@
+.wheel-container {
+    position: relative;
+    width: 300px;
+    height: 300px;
+    margin: 50px auto;
+}
+
+.wheel {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    border: 5px solid #ccc;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: rotate(0deg);
+    transition: transform 4s ease-out;
+}
+
+.wheel-participant {
+    position: absolute;
+    width: 50%;
+    height: 50%;
+    background-color: #f39c12;
+    text-align: center;
+    line-height: 150%;
+    transform-origin: 100% 100%;
+    transform: rotate(calc(var(--i) * 360deg / var(--count))) translate(-100%);
+    clip-path: polygon(100% 100%, 0 100%, 100% 0);
+    font-weight: bold;
+    color: #fff;
+}
+
+.indicator {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    z-index: 10;
+}
+
+.highlight {
+    background-color: #e74c3c !important;
+}
+
+button {
+    margin-top: 20px;
+}
+
+.spinning {
+    pointer-events: none;
+}

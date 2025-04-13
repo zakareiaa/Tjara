@@ -1,0 +1,81 @@
+.help-page .main-sec {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 25px;
+}
+
+.help-page .main-sec .contest {
+    width: 818px;
+}
+
+.help-page .main-sec .heading-sec2 {
+    margin: 46px 0 64px 0;
+}
+
+.help-page .main-sec .heading-sec2 p {
+    font-size: 17.56px;
+    font-weight: 400;
+    line-height: 22.12px;
+    color: #374856;
+    margin-bottom: 34px;
+}
+
+.help-page .main-sec .heading-sec2 h2 {
+    font-family: "Outfit", sans-serif;
+    font-size: 40px;
+    font-weight: 600;
+    line-height: 50.4px;
+    text-align: left;
+    color: #374856;
+}
+
+.help-page .faqs-section {
+    display: grid;
+    gap: 20px;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.help-page .faqs-section .faq {
+    width: 100%;
+    border-radius: 11px;
+}
+
+.help-page .faqs-section .faq .title {
+    display: flex;
+    height: 67px;
+    border-radius: 11px;
+    background-color: #F8F8F8;
+    display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    font-family: "Outfit", sans-serif;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 25.2px;
+    text-align: left;
+
+}
+
+.help-page .faqs-section .faq .description{
+    margin-top: -5px;
+    padding: 20px;
+    padding-top: 35px;
+    border-radius: 11px;
+    border-top-right-radius: 0px;
+    border-top-left-radius: 0px;
+    background-color: #F8F8F8;
+}
+
+.help-page .faqs-section .faq.active{
+    border: 1px solid #34A853;
+}
+
+.help-page .faqs-section .faq.active .title{
+    color: #34A853;
+}
+
+.help-page .faqs-section .faq.active .svg{
+    fill: #34A853;
+    color: #34A853;
+}

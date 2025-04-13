@@ -1,0 +1,199 @@
+/* Contest Questions Styling */
+.contest-details-sec .details-sec .contest-title {
+    font-family: var(--font-outfit);
+    font-size: 2.5rem;
+    color: #2c3e50;
+    text-align: center;
+    margin-bottom: 2rem;
+    font-weight: 600;
+    position: relative;
+    padding-bottom: 1rem;
+}
+
+.contest-details-sec .details-sec .contest-title::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100px;
+    height: 4px;
+    background: var(--main-red-color);
+    border-radius: 2px;
+}
+
+.contest-details-sec .details-sec .contest-questions {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 2rem;
+}
+
+.contest-details-sec .details-sec .question-block {
+    background: #ffffff;
+    border-radius: 12px;
+    padding: 2rem;
+    margin-bottom: 2rem;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.2s ease;
+}
+
+.contest-details-sec .details-sec .question-block:hover {
+    transform: translateY(-2px);
+}
+
+.contest-details-sec .details-sec .question-block h2 {
+    font-family: var(--font-raleway);
+    font-size: 1.25rem;
+    color: #2c3e50;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 0.75rem;
+}
+
+.contest-details-sec .details-sec .options {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1rem;
+}
+
+.contest-details-sec .details-sec .option {
+    position: relative;
+    padding: 0.5rem 1rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+    transition: all 0.2s ease;
+    cursor: pointer;
+    border: 1px solid #e2e8f0;
+    min-width: 120px;
+}
+
+.contest-details-sec .details-sec .option:hover {
+    background: #f1f3f5;
+    border-color: #cbd5e1;
+}
+
+.contest-details-sec .details-sec .option input[type="radio"] {
+    appearance: none;
+    -webkit-appearance: none;
+    width: 18px;
+    height: 18px;
+    border: 2px solid #cbd5e1;
+    border-radius: 50%;
+    margin-right: 8px;
+    position: relative;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    flex-shrink: 0;
+}
+
+.contest-details-sec .details-sec .option input[type="radio"]:checked {
+    border-color: var(--main-red-color);
+    background: var(--main-red-color);
+}
+
+.contest-details-sec .details-sec .option input[type="radio"]:checked::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 6px;
+    height: 6px;
+    background: white;
+    border-radius: 50%;
+}
+
+.contest-details-sec .details-sec .option input[type="radio"]:disabled {
+    opacity: 0.6;
+    cursor: not-allowed;
+}
+
+.contest-details-sec .details-sec .option label {
+    font-family: var(--font-public-sans);
+    color: #4a5568;
+    font-size: 0.95rem;
+    cursor: pointer;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    flex: 0 1 auto;
+    display: inline-flex;
+    align-items: center;
+}
+
+.contest-details-sec .details-sec .participate {
+    display: block;
+    width: 200px;
+    margin: 2rem auto;
+    padding: 1rem 2rem;
+    background: var(--main-red-color);
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-family: var(--font-poppin);
+    font-weight: 600;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+}
+
+.contest-details-sec .details-sec .participate:hover:not([style*="opacity"]) {
+    background: #b31235;
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(210, 22, 66, 0.2);
+}
+
+.contest-details-sec .details-sec .participate:active:not([style*="opacity"]) {
+    transform: translateY(0);
+}
+
+.contest-details-sec .details-sec .expiry-date {
+    text-align: center;
+    font-family: var(--font-public-sans);
+    color: #64748b;
+    margin-top: 1rem;
+}
+
+.contest-details-sec .details-sec .date {
+    font-weight: 600;
+}
+
+.contest-details-sec .details-sec .expired {
+    color: var(--main-red-color);
+}
+
+.contest-details-sec button.participate:disabled {
+    opacity: 0.6 !important;
+    cursor: not-allowed !important;
+    pointer-events: none !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .contest-details-sec .details-sec .contest-title {
+        font-size: 2rem;
+    }
+
+    .contest-details-sec .details-sec .contest-questions {
+        padding: 1rem;
+    }
+
+    .contest-details-sec .details-sec .question-block {
+        padding: 1.5rem;
+    }
+
+    .contest-details-sec .details-sec .option {
+        padding: 0.5rem 0.75rem;
+        min-width: calc(50% - 0.5rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .contest-details-sec .details-sec .option {
+        min-width: 100%;
+    }
+}

@@ -1,0 +1,169 @@
+#contact-form button {
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+#contact-form button:hover {
+  background-color: transparent;
+  border: 1px solid var(--main-red-color);
+  color: var(--main-red-color);
+}
+
+.inquireNowPopup .container form .buttons a {
+  transition: all 0.3s ease;
+}
+
+.inquireNowPopup .container form .buttons a:hover {
+  background-color: transparent;
+  color: #47c856;
+  border: 1px solid #47c856;
+}
+
+.inquireNowPopup .container form .buttons a:hover svg path {
+  fill: #47c856;
+}
+
+
+
+.inquireNowPopup {
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  display: flex;
+  /* display: none; */
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  z-index: 100000000;
+  left: 0;
+}
+
+.inquireNowPopup .bg {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: #0000003d;
+}
+
+.inquireNowPopup .container {
+  z-index: 1;
+  background: white;
+  width: 530px;
+  height: max-content;
+  padding: 54px 42px;
+  border-radius: 23px;
+  overflow: auto;
+  max-height: 95vh;
+  position: relative;
+  /* overflow: scroll; */
+}
+
+.inquireNowPopup .container h2 {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 600;
+  color: black;
+}
+
+.inquireNowPopup .container .close {
+  position: absolute;
+  top: 23px;
+  right: 26px;
+  cursor: pointer;
+}
+
+.inquireNowPopup .container form {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  margin-top: 28px;
+}
+
+.inquireNowPopup .container form input,
+.inquireNowPopup .container form textarea {
+  padding-left: 16px;
+  font-size: 16px;
+  line-height: 20px;
+  width: 100%;
+  height: 52px;
+  border-radius: 10px;
+  border: 1px solid #eaeaea;
+  background: #fbfbfb;
+}
+
+.inquireNowPopup .container form textarea {
+  height: 247px;
+  padding-top: 16px;
+}
+
+.inquireNowPopup .container form .buttons a,
+.inquireNowPopup .container form .buttons button {
+  height: 46px;
+  width: 100%;
+  border: 0;
+  background: var(--main-red-color);
+  color: white;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  gap: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.inquireNowPopup .container form .buttons button:hover {
+  background: transparent;
+  border: 1px solid var(--main-red-color);
+  color: var(--main-red-color);
+}
+
+.inquireNowPopup .container form .buttons a {
+  background: #47c856;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 14px;
+}
+
+.inquireNowPopup .container form .buttons p {
+  font-size: 14px;
+  line-height: 17px;
+  margin: 16px 0;
+  width: 100%;
+  text-align: center;
+  display: flex;
+  gap: 11px;
+  color: #dedede;
+  align-items: center;
+}
+
+.inquireNowPopup .container form .buttons p span {
+  width: 47%;
+  height: 0;
+  border-top: 1px solid #dedede;
+  display: flex;
+}
+
+@media screen and (max-width: 450px) {
+  .inquireNowPopup .container {
+    margin: 0 16px;
+    padding: 38px 15px;
+    height: calc(90vh - 70px);
+    margin-top: -70px;
+  }
+
+  .inquireNowPopup .container form input,
+  .inquireNowPopup .container form textarea {
+    padding-left: 11px;
+  }
+
+  .inquireNowPopup .container h2 {
+    font-size: 24px;
+    line-height: 28px;
+  }
+}

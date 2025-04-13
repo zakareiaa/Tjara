@@ -1,0 +1,451 @@
+.hero-banner-sec {
+  background: linear-gradient(to right, rgb(240 253 255 / 60%), rgb(240 253 255 / 60%)), url("/src/assets/hero-banner.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.hero-banner {
+  position: relative;
+  display: flex !important;
+  align-items: center;
+}
+
+.hero-banner .container {
+  width: 95%;
+  display: flex;
+  max-width: 1640px;
+  margin: auto;
+  padding: 40px 0;
+  align-items: flex-start;
+}
+
+.hero-banner-bg-img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 0;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  display: none;
+}
+
+.slick-prev,
+.slick-next {
+  top: 43%;
+}
+
+.hero-banner-text-content-container {
+  /* padding: 0 87px 0 239px; */
+  width: 65%;
+  z-index: 1;
+}
+
+.hero-banner-sale-name {
+  font-size: 33.28px;
+  font-weight: 700;
+  color: #000000;
+}
+
+.IsDark .hero-banner-sale-name {
+  color: white;
+}
+
+.hero-banner-sale-year {
+  font-size: 55.47px;
+  font-weight: 700;
+  color: #85990c;
+}
+
+.heroBannerContainer .slick-dots {
+  display: none !important;
+}
+
+.hero-banner-sale-desc {
+  font-size: 20px;
+  font-weight: 600;
+  color: #000000;
+  margin-top: 10px;
+  width: 60%;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+.IsDark .hero-banner-sale-desc {
+  color: white;
+}
+
+.hero-banner-shop-btn {
+  font-size: 20px;
+  font-weight: 600;
+  background-color: var(--main-red-color);
+  color: #fff;
+  border: 1px solid #fff;
+  outline: none;
+  cursor: pointer;
+  line-height: 43px;
+  cursor: pointer;
+  padding: 12px 48px;
+  margin-top: 35px;
+  text-decoration: none;
+}
+
+.hero-banner-shop-btn a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.hero-banner-product-img-container {
+  z-index: 1;
+  /* position: absolute; */
+  right: 100px;
+  bottom: 0;
+}
+
+.hero-banner-product-img-container img {
+  width: 100%;
+  max-height: 300px
+}
+
+.hero-banner-product-img-discount {
+  position: absolute;
+  background-color: #fa8232;
+  color: #fff;
+  padding: 6px 18px;
+  right: 214px;
+  top: 16px;
+}
+
+/* RESPONSIVENESS STARTED */
+@media screen and (max-width: 1750px) {
+  .hero-banner-text-content-container {
+    padding: 0;
+    z-index: 1;
+  }
+
+  .hero-banner-product-img-container {
+    right: 50px;
+  }
+
+  .hero-banner .container {
+    width: 95%;
+  }
+
+  .hero-banner-product-img-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .hero-banner-product-img-container img {
+    width: 100%;
+    max-height: 300px
+  }
+
+  .hero-banner-shop-btn {
+    padding: 0px 30px;
+  }
+}
+
+@media screen and (max-width: 1600px) {
+  .heroBannerContainer .slick-prev {
+    /* left: 20px !important; */
+  }
+
+  /* .heroBannerContainer .slick-next{ right: 20px !important;} */
+  .hero-banner-product-img-container img {
+    margin-left: auto;
+    width: 90%;
+  }
+
+  .hero-banner-product-img-container {
+    right: 90px;
+  }
+
+  .hero-banner-product-img-discount {
+    right: 100px;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .hero-banner-product-img-discount {
+    right: 65px;
+    top: 0;
+  }
+
+  .hero-banner-product-img-container img {
+    margin-left: auto;
+    object-fit: contain;
+    /* width: 80%; */
+  }
+
+  .hero-banner-sale-name {
+    line-height: 1.3;
+    font-size: 30px;
+  }
+
+  .hero-banner-sale-year {
+    line-height: 1.3;
+    font-size: 50.47px;
+  }
+
+  .hero-banner {
+    /* height: 300px; */
+  }
+
+  .hero-banner .container {
+    align-items: center;
+  }
+
+  .hero-banner-sale-desc {
+    margin-bottom: 10px;
+  }
+
+  .hero-banner-shop-btn {
+    line-height: 30px;
+    padding: 10px 25px;
+  }
+
+  .hero-banner-product-img-container {
+    width: 45%;
+  }
+}
+
+
+@media screen and (max-width: 1400px) {
+  .hero-banner-product-img-container img {
+    margin-left: auto;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .hero-banner-text-content-container {
+    padding: 0;
+    z-index: 1;
+    width: 55%;
+  }
+
+  .hero-banner-product-img-container img {
+    margin-left: auto;
+    /* width: 62%; */
+  }
+
+  .hero-banner-shop-btn {
+    margin-top: 8px;
+  }
+
+  .hero-banner-sale-year {
+    line-height: 1.2;
+    font-size: 40.47px;
+  }
+
+  .hero-banner-product-img-discount {
+    right: 40px;
+    top: 0;
+  }
+
+  .hero-banner-sale-desc {
+    font-size: 16px;
+  }
+
+}
+
+@media screen and (max-width: 1050px) {
+  .hero-banner-sale-desc {
+    margin: auto;
+  }
+
+  .hero-banner {
+    padding-top: 30px;
+    height: auto;
+  }
+
+  .hero-banner .container {
+
+    align-items: center;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .hero-banner-product-img-container {
+    width: 70% !important;
+  }
+
+  /* .hero-banner-product-img-discount {
+    display: none;
+  } */
+
+  .hero-banner-shop-btn {
+    line-height: 30px;
+    padding: 7px 30px;
+    border-radius: 5px;
+  }
+
+  .hero-banner-text-content-container {
+    text-align: center;
+    padding: 0 0px 0 0px;
+    z-index: 1;
+  }
+
+  .hero-banner-product-img-container {
+    right: 0px;
+    position: relative;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+
+  .hero-banner-product-img-container img {
+    margin-left: 0px;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+
+  .hero-banner-bg-img {
+    height: 100%;
+    object-fit: cover
+  }
+
+  .hero-banner-text-content-container {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-banner-sale-year {
+    line-height: 1.3;
+    font-size: 40px;
+  }
+
+  .hero-banner-sale-name {
+    line-height: 1.3;
+    font-size: 20px;
+  }
+
+  .wrapper.all-category-container {
+    margin-top: 0 !important;
+  }
+
+  .hero-banner-sale-desc {
+    font-size: 15px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 20.32px;
+    letter-spacing: 5px;
+    margin-bottom: 10px;
+  }
+
+
+  .hero-banner-shop-btn {
+    font-weight: 400;
+    font-size: 16px;
+    padding: 5px 25px;
+  }
+
+  .sale-banner-Container .slick-dots {
+    display: flex;
+  }
+
+  .sale-banner-Container .slick-dots li {
+    height: 10px;
+    border-radius: 100%;
+    width: 10px;
+    background: #EDEDED;
+  }
+
+  .sale-banner-Container .slick-dots li.slick-active {
+    background: #34A853;
+  }
+
+}
+
+@media screen and (max-width: 650px) {
+  .sale-banner-front {
+    width: auto !important;
+    max-width: 50%;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .hero-banner {
+    gap: 10px;
+    height: auto;
+    padding-top: 20px;
+    height: 200px;
+  }
+
+  .hero-banner .container {
+    margin: 0;
+    width: 100%;
+    padding-bottom: 0;
+    flex-direction: row;
+    padding-top: 0;
+    position: relative;
+  }
+
+  .hero-banner-shop-btn {
+    line-height: 23px;
+  }
+
+  .hero-banner-shop-btn a {
+    font-size: 8px;
+  }
+
+  .hero-banner-product-img-container {
+    width: 100% !important;
+    max-width: 100% !important;
+    position: absolute;
+    z-index: 0;
+    filter: blur(2px);
+  }
+
+  .hero-banner-product-img-container img {
+    object-fit: cover;
+  }
+
+
+  .hero-banner-sale-name {
+    line-height: 1.2;
+    font-size: 14px;
+  }
+
+  .hero-banner-sale-year {
+    line-height: 1.3;
+    font-size: 22px;
+  }
+
+  .hero-banner-sale-desc {
+    font-size: 10px;
+    font-weight: 400;
+    color: #000000;
+    line-height: 1.2;
+    letter-spacing: 2px;
+    margin-bottom: 5px;
+  }
+
+  .hero-banner-shop-btn {
+    font-weight: 400;
+    font-size: 14px;
+    padding: 0px 12px;
+  }
+
+  .hero-banner-product-img-container img {
+    width: 100%;
+    height: 200px;
+    max-height: 235px
+  }
+
+  .hero-banner-sale-desc {
+    width: 100%;
+  }
+
+  .slick-prev,
+  .slick-next {
+    display: none !important;
+  }
+}

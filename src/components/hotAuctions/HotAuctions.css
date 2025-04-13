@@ -1,0 +1,44 @@
+.auction-products-container {
+  margin: 60px 0;
+}
+
+.auction-products-container .feature-products-container-heading-row {
+  max-width: 1640px;
+}
+
+.auction-products-container .slick-slider {
+  margin: 0 10px !important;
+}
+
+.auction-products-container .slick-track {
+  padding: 20px 0;
+}
+
+.auction-products-container .slick-list {
+  mask-image: linear-gradient(transparent,
+      black 42%,
+      black 67%,
+      transparent 100%);
+  -webkit-mask-image: linear-gradient(to right,
+      transparent,
+      black 29%,
+      black 72%,
+      transparent 100%);
+}
+
+.auction-products-container .slick-arrow {
+  z-index: 10000;
+}
+
+
+@media screen and (max-width: 768px) {
+  .auction-products-container .slick-slider {
+    margin: 0 10px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .auction-product-container .slick-list {
+    -webkit-mask-image: none;
+  }
+}

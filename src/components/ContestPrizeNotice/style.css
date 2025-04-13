@@ -1,0 +1,850 @@
+.contest-prize-notice {
+    position: relative;
+    margin: 2rem auto;
+    text-align: center;
+    /* background: linear-gradient(135deg, #2c1654 0%, #1a0b38 100%); */
+    background: linear-gradient(135deg, #d21642 0%, #d21642 100%);
+    border-radius: 20px;
+    padding: 2.5rem;
+    box-shadow:
+        0 0 30px rgba(138, 43, 226, 0.3),
+        inset 0 0 20px rgba(255, 215, 0, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    overflow: hidden;
+    animation: popIn 0.5s cubic-bezier(0.26, 1.32, 0.46, 0.98);
+}
+
+/* Light Ray Effects */
+.light-rays {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
+.light-rays-1::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 200%;
+    height: 200%;
+    background: conic-gradient(from 0deg at 50% 50%,
+            transparent 0deg,
+            rgba(255, 215, 0, 0.1) 20deg,
+            transparent 40deg,
+            rgba(255, 215, 0, 0.1) 60deg,
+            transparent 80deg);
+    transform: translate(-50%, -50%);
+    animation: rays 20s linear infinite;
+}
+
+.light-rays-2::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 180%;
+    height: 180%;
+    background: conic-gradient(from 45deg at 50% 50%,
+            transparent 0deg,
+            rgba(138, 43, 226, 0.1) 30deg,
+            transparent 60deg);
+    transform: translate(-50%, -50%);
+    animation: rays 15s linear infinite reverse;
+}
+
+.light-rays-3::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 150%;
+    height: 150%;
+    background: conic-gradient(from 90deg at 50% 50%,
+            transparent 0deg,
+            rgba(255, 255, 255, 0.1) 10deg,
+            transparent 20deg);
+    transform: translate(-50%, -50%);
+    animation: rays 10s linear infinite;
+}
+
+/* Prize Header Styles */
+.prize-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.crown-icon {
+    width: 40px;
+    height: 40px;
+    color: #ffd700;
+    animation: bounce 2s infinite;
+}
+
+.prize-title {
+    color: #ffd700;
+    font-size: 2.5rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    text-shadow:
+        0 0 10px rgba(255, 215, 0, 0.5),
+        0 0 20px rgba(255, 215, 0, 0.3);
+    animation: pulse 2s infinite;
+}
+
+/* Prize Value Display */
+.prize-value-display {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(138, 43, 226, 0.2);
+    border-radius: 15px;
+    border: 1px solid rgba(255, 215, 0, 0.2);
+}
+
+.trophy-icon {
+    width: 80px;
+    height: 80px;
+    color: #ffd700;
+    margin: 1rem auto;
+    animation: float 3s ease-in-out infinite;
+    filter: drop-shadow(0 0 10px rgba(255, 215, 0, 0.5));
+}
+
+.prize-text {
+    color: #ffd700;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-top: 1rem;
+    text-shadow: 0 0 15px rgba(255, 215, 0, 0.5);
+}
+
+/* Name Picker Section */
+.name-picker-section {
+    margin: 2rem 0;
+    padding: 1.5rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+}
+
+.picker-header {
+    margin-bottom: 1.5rem;
+}
+
+.picker-header h3 {
+    color: #ffd700;
+    font-size: 1.8rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.name-display-container {
+    position: relative;
+    background: linear-gradient(180deg, #2c1654 0%, #1a0b38 100%);
+    border: 2px solid rgba(255, 215, 0, 0.3);
+    border-radius: 10px;
+    padding: 1.5rem;
+    margin: 1.5rem 0;
+    overflow: hidden;
+}
+
+.name-scroll-effect {
+    position: absolute;
+    left: 0;
+    right: 0;
+    height: 40px;
+    z-index: 2;
+}
+
+.name-scroll-effect.top {
+    top: 0;
+    background: linear-gradient(to bottom, rgba(42, 21, 84, 1) 0%, rgba(42, 21, 84, 0) 100%);
+}
+
+.name-scroll-effect.bottom {
+    bottom: 0;
+    background: linear-gradient(to top, rgba(42, 21, 84, 1) 0%, rgba(42, 21, 84, 0) 100%);
+}
+
+.name-display {
+    font-size: 2rem;
+    color: #ffd700;
+    min-height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.name-display.selecting .current-name {
+    animation: slotMachine 0.1s linear infinite;
+}
+
+.lucky-picker-btn {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    padding: 1rem 2rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0 5px 15px rgba(255, 215, 0, 0.3);
+}
+
+.lucky-picker-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 20px rgba(255, 215, 0, 0.4);
+}
+
+.lucky-picker-btn:disabled {
+    background: linear-gradient(45deg, #cccccc, #999999);
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Winner Details Section */
+.winner-details-section {
+    margin-top: 2rem;
+    animation: fadeInUp 0.5s ease-out;
+}
+
+.winner-card {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1.5rem;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    padding: 1.5rem;
+    margin-bottom: 1.5rem;
+}
+
+.winner-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 3px solid #ffd700;
+    box-shadow: 0 0 20px rgba(255, 215, 0, 0.3);
+}
+
+.avatar-placeholder {
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2rem;
+    color: #fff;
+}
+
+.winner-info {
+    text-align: left;
+    color: #fff;
+}
+
+.winner-name {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+    color: #ffd700;
+}
+
+.winner-phone,
+.winner-email {
+    font-size: 1rem;
+    opacity: 0.9;
+}
+
+.prize-status {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    color: white;
+    font-size: 1.1rem;
+    margin-top: 1rem;
+}
+
+.award-icon {
+    color: #ffd700;
+    animation: spin 3s linear infinite;
+}
+
+/* Animations */
+@keyframes rays {
+    to {
+        transform: translate(-50%, -50%) rotate(360deg);
+    }
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+/* Animations (continued) */
+@keyframes float {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-15px);
+    }
+}
+
+@keyframes pulse {
+
+    0%,
+    100% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+}
+
+@keyframes spin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+@keyframes popIn {
+    0% {
+        transform: scale(0.8);
+        opacity: 0;
+    }
+
+    80% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slotMachine {
+    0% {
+        transform: translateY(-100%);
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    10% {
+        transform: translateY(-90%);
+        opacity: 0.2;
+        filter: blur(4px);
+    }
+
+    20% {
+        transform: translateY(-80%);
+        opacity: 0.4;
+        filter: blur(3px);
+    }
+
+    30% {
+        transform: translateY(-70%);
+        opacity: 0.6;
+        filter: blur(2px);
+    }
+
+    40% {
+        transform: translateY(-60%);
+        opacity: 0.8;
+        filter: blur(1px);
+    }
+
+    50% {
+        transform: translateY(-50%);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    60% {
+        transform: translateY(-40%);
+        opacity: 0.8;
+        filter: blur(1px);
+    }
+
+    70% {
+        transform: translateY(-30%);
+        opacity: 0.6;
+        filter: blur(2px);
+    }
+
+    80% {
+        transform: translateY(-20%);
+        opacity: 0.4;
+        filter: blur(3px);
+    }
+
+    90% {
+        transform: translateY(-10%);
+        opacity: 0.2;
+        filter: blur(4px);
+    }
+
+    100% {
+        transform: translateY(0);
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+
+@keyframes shine {
+
+    0%,
+    100% {
+        opacity: 0.3;
+    }
+
+    50% {
+        opacity: 0.7;
+    }
+}
+
+/* Floating stars animation */
+.floating-stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
+
+.floating-star {
+    position: absolute;
+    color: #ffd700;
+    opacity: 0.6;
+    animation: floatStar 3s ease-in-out infinite;
+}
+
+.floating-star:nth-child(1) {
+    top: 20%;
+    left: 10%;
+    animation-delay: 0s;
+}
+
+.floating-star:nth-child(2) {
+    top: 15%;
+    right: 15%;
+    animation-delay: 0.5s;
+}
+
+.floating-star:nth-child(3) {
+    bottom: 20%;
+    left: 15%;
+    animation-delay: 1s;
+}
+
+.floating-star:nth-child(4) {
+    bottom: 15%;
+    right: 10%;
+    animation-delay: 1.5s;
+}
+
+.floating-star:nth-child(5) {
+    top: 50%;
+    right: 5%;
+    animation-delay: 2s;
+}
+
+@keyframes floatStar {
+
+    0%,
+    100% {
+        transform: translateY(0) rotate(0deg);
+        opacity: 0.6;
+    }
+
+    50% {
+        transform: translateY(-10px) rotate(20deg);
+        opacity: 1;
+    }
+}
+
+/* Corner decorations */
+.corner-decoration {
+    position: absolute;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #ffd700, transparent);
+    animation: shine 2s ease-in-out infinite;
+}
+
+.corner-decoration.top-left {
+    top: 0;
+    left: 0;
+    border-top-left-radius: 20px;
+}
+
+.corner-decoration.top-right {
+    top: 0;
+    right: 0;
+    transform: rotate(90deg);
+    border-top-right-radius: 20px;
+}
+
+.corner-decoration.bottom-left {
+    bottom: 0;
+    left: 0;
+    transform: rotate(-90deg);
+    border-bottom-left-radius: 20px;
+}
+
+.corner-decoration.bottom-right {
+    bottom: 0;
+    right: 0;
+    transform: rotate(180deg);
+    border-bottom-right-radius: 20px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .contest-prize-notice {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .prize-title {
+        font-size: 2rem;
+    }
+
+    .prize-text {
+        font-size: 1.8rem;
+    }
+
+    .name-display {
+        font-size: 1.6rem;
+    }
+
+    .trophy-icon {
+        width: 60px;
+        height: 60px;
+    }
+
+    .corner-decoration {
+        width: 40px;
+        height: 40px;
+    }
+
+    .winner-card {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .winner-info {
+        text-align: center;
+    }
+}
+
+
+
+.expired-message {
+    text-align: center;
+    margin-bottom: 2rem;
+    padding: 2rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 15px;
+    animation: fadeIn 0.5s ease-out;
+}
+
+.expired-message h2 {
+    color: #ffd700;
+    font-size: 2rem;
+    margin-bottom: 1rem;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.5);
+}
+
+.expired-message p {
+    color: white;
+    font-size: 1.2rem;
+    opacity: 0.9;
+}
+
+/* Enhanced button styles */
+.lucky-picker-btn {
+    background: linear-gradient(45deg, #ffd700, #ffa500);
+    color: #000;
+    border: none;
+    border-radius: 25px;
+    padding: 1.2rem 3rem;
+    font-size: 1.4rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow:
+        0 5px 15px rgba(255, 215, 0, 0.3),
+        0 0 20px rgba(255, 215, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.lucky-picker-btn:before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg,
+            transparent,
+            rgba(255, 255, 255, 0.3),
+            transparent);
+    transform: rotate(45deg);
+    animation: buttonShine 2s linear infinite;
+}
+
+.lucky-picker-btn:hover {
+    transform: translateY(-2px);
+    box-shadow:
+        0 7px 20px rgba(255, 215, 0, 0.4),
+        0 0 30px rgba(255, 215, 0, 0.3);
+}
+
+.lucky-picker-btn:active {
+    transform: translateY(1px);
+}
+
+
+
+
+
+
+/* Prize section animation */
+.prize-section {
+    opacity: 0;
+    transform: translateY(20px);
+    animation: slideInFadeUp 0.5s ease-out forwards;
+}
+
+/* New animations */
+@keyframes buttonShine {
+    0% {
+        left: -50%;
+    }
+
+    100% {
+        left: 150%;
+    }
+}
+
+@keyframes slideInFadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+/* Enhance name display animation */
+.name-display.selecting .current-name {
+    animation: enhancedSlotMachine 0.1s linear infinite;
+}
+
+@keyframes enhancedSlotMachine {
+    0% {
+        transform: translateY(-100%) scale(0.8);
+        opacity: 0;
+        filter: blur(5px);
+    }
+
+    50% {
+        transform: translateY(0) scale(1.1);
+        opacity: 1;
+        filter: blur(0);
+    }
+
+    100% {
+        transform: translateY(100%) scale(0.8);
+        opacity: 0;
+        filter: blur(5px);
+    }
+}
+
+/* Additional responsive styles */
+@media (max-width: 768px) {
+    .expired-message h2 {
+        font-size: 1.6rem;
+    }
+
+    .expired-message p {
+        font-size: 1rem;
+    }
+
+    .lucky-picker-btn {
+        padding: 1rem 2rem;
+        font-size: 1.2rem;
+    }
+}
+
+
+
+
+
+
+/* Contest Expiry Timer Styles */
+.contest-expiry-timer {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    background: linear-gradient(135deg, #2c1654 0%, #1a0b38 100%);
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 0 30px rgba(138, 43, 226, 0.2);
+    border: 2px solid rgba(255, 215, 0, 0.2);
+}
+
+.timer-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.timer-header h3 {
+    color: #ffd700;
+    font-size: 1.8rem;
+    font-weight: bold;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+}
+
+.timer-icon {
+    color: #ffd700;
+    width: 32px;
+    height: 32px;
+    animation: pulse 2s infinite;
+}
+
+.timer-display {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    margin: 0 auto;
+}
+
+.time-block {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 80px;
+}
+
+.time-value {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #ffd700;
+    text-shadow: 0 0 10px rgba(255, 215, 0, 0.3);
+    animation: countPulse 1s ease-in-out infinite;
+}
+
+.time-label {
+    font-size: 0.9rem;
+    color: #fff;
+    opacity: 0.8;
+    margin-top: 0.5rem;
+}
+
+.time-separator {
+    color: #ffd700;
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-top: -1rem;
+}
+
+@keyframes countPulse {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.05);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+/* Responsive styles for timer */
+@media (max-width: 768px) {
+    .contest-expiry-timer {
+        margin: 1rem;
+        padding: 1.5rem;
+    }
+
+    .timer-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .timer-display {
+        gap: 0.5rem;
+    }
+
+    .time-block {
+        min-width: 60px;
+    }
+
+    .time-value {
+        font-size: 1.8rem;
+    }
+
+    .time-label {
+        font-size: 0.8rem;
+    }
+
+    .time-separator {
+        font-size: 1.8rem;
+    }
+}

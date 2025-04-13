@@ -1,0 +1,131 @@
+.social-share-overlay {
+    position: fixed;
+    inset: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+}
+
+.social-share-modal {
+    background-color: #fff;
+    border-radius: 8px;
+    padding: 24px;
+    max-width: 500px;
+    width: calc(100% - 32px);
+    margin: 0 16px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.social-share-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 16px;
+}
+
+.social-share-title {
+    font-size: 20px;
+    font-weight: 600;
+    margin: 0;
+}
+
+.social-share-close {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 8px;
+    color: #666;
+    transition: color 0.3s ease;
+}
+
+.social-share-close:hover {
+    color: #333;
+}
+
+.social-share-message {
+    color: #666;
+    margin-bottom: 16px;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.social-share-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+    margin-bottom: 24px;
+}
+
+.social-share-button {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 12px;
+    border: none;
+    background: none;
+    cursor: pointer;
+    border-radius: 8px;
+    transition: background-color 0.3s ease;
+}
+
+.social-share-button img {
+    width: 32px;
+    height: 32px;
+    margin-bottom: 8px;
+}
+
+.social-share-button span {
+    font-size: 14px;
+    color: #666;
+}
+
+/* Platform-specific hover states */
+.social-share-button.whatsapp:hover {
+    background-color: rgba(37, 211, 102, 0.1);
+}
+
+.social-share-button.facebook:hover {
+    background-color: rgba(66, 103, 178, 0.1);
+}
+
+.social-share-button.twitter:hover {
+    background-color: rgba(29, 161, 242, 0.1);
+}
+
+.social-share-button.linkedin:hover {
+    background-color: rgba(0, 119, 181, 0.1);
+}
+
+.social-share-button.pinterest:hover {
+    background-color: rgba(230, 0, 35, 0.1);
+}
+
+.social-share-button.copy-link:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+/* Responsive adjustments */
+@media (max-width: 480px) {
+    .social-share-modal {
+        padding: 16px;
+    }
+
+    .social-share-grid {
+        gap: 12px;
+    }
+
+    .social-share-button {
+        padding: 8px;
+    }
+
+    .social-share-button img {
+        width: 24px;
+        height: 24px;
+    }
+
+    .social-share-button span {
+        font-size: 12px;
+    }
+}

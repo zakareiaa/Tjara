@@ -1,0 +1,136 @@
+/* @import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap"); */
+/* @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Raleway:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Public+Sans:ital,wght@0,100..900;1,100..900&display=swap"); */
+
+:root {
+  --main-red-color: #d21642;
+  --main-green-color: #096c2b;
+  --font-outfit: "Outfit", sans-serif;
+  /* --font-poppin: "Poppins", sans-serif;
+  --font-raleway: "Raleway", sans-serif;
+  --font-public-sans: "Public Sans", sans-serif; */
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: var(--font-outfit);
+}
+
+body {
+  width: 100vw !important;
+  overflow-x: hidden;
+}
+
+body:has(.contestsContainer) {
+  overflow: visible;
+}
+
+.wrapper {
+  margin: 60px auto !important;
+  width: 1640px;
+}
+
+.load-more-btn-row {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
+
+.button {
+  background-color: var(--main-red-color);
+  color: #fff;
+  border-radius: 8px;
+  outline: none;
+  cursor: pointer;
+  padding: 13px 30px;
+  border: 1px solid var(--main-red-color);
+}
+
+.button:hover {
+  background: transparent;
+  color: var(--main-red-color);
+  transition: 0.2s all ease-in-out;
+}
+
+.display-flex {
+  display: flex;
+}
+
+.align-center {
+  align-items: center;
+}
+
+.skeleton-parent-container {
+  width: 95%;
+  margin: auto;
+  display: flex;
+}
+
+.Toastify__toast-container--top-right {
+  z-index: 100000000000000000;
+}
+
+#_oss_container {
+  display: none !important;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                     Prevent The Background Scroll When Any Popup Is Active                     */
+/* ---------------------------------------------------------------------------------------------- */
+
+html:has(.jobsMainContainer .shop-category-inner-left.active),
+html:has(.shop-category-inner-container .shop-category-inner-left.active),
+html:has(.sizeRatingsPopup),
+html:has(.productMeasurmentPopup),
+html:has(.paymentPopup),
+html:has(.guidelinesPopup),
+html:has(.customerServicePopup),
+html:has(.headerMenuvideoPopup),
+html:has(.successOrder),
+html:has(.sizeguidePopup),
+html:has(.inquireNowPopup),
+html:has(.liveChatContainer),
+html:has(.loginModal.active),
+html:has(.active.footer),
+html:has(.categoriesDropdown.active),
+html:has(.wrapper.BlogsArchive .shop-category-inner-left.active),
+html:has(.header-search-prod-container.active),
+html:has(.LeadGenerationModal.active),
+html:has(.single-product-details-sec.productPerviewContainer.active) {
+  overflow: hidden;
+  width: 99vw;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                   Chrome, Safari, Edge, Opera                                  */
+/* ---------------------------------------------------------------------------------------------- */
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                         Responsiveness                                         */
+/* ---------------------------------------------------------------------------------------------- */
+
+@media (max-width: 1652px) {
+  .wrapper {
+    padding: 0 100px;
+  }
+}
+
+@media (max-width: 1330px) {
+  .wrapper {
+    padding: 0 60px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .wrapper {
+    padding: 0 30px;
+  }
+}

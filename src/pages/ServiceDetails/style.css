@@ -1,0 +1,508 @@
+.serviceDetails {
+  display: flex;
+  gap: 48px;
+}
+
+.serviceDetails .left img {
+  width: 873px;
+  height: auto;
+  max-width: 875px;
+  border-radius: 27px;
+}
+
+.serviceDetailsTop .shop-category-heading-top h2 {
+  display: none;
+}
+
+.serviceDetails .ServiceDetails .Top .rating {
+  height: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.serviceDetails .ServiceDetails .Top .rating img {
+  height: 9px;
+}
+
+.serviceDetails .ServiceDetails .Top .rating p {
+  margin-left: 9px;
+  font-size: 16px;
+  margin-top: 0;
+  line-height: 20px;
+  color: #707070;
+}
+
+.serviceDetails .ServiceDetails .Top h2 {
+  font-size: 35px;
+  line-height: 31px;
+  color: black;
+  font-weight: 600;
+  margin-top: 5px;
+}
+
+.serviceDetails .ServiceDetails .Top p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #6f6f6f;
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  gap: 7px;
+}
+
+.serviceDetails .ServiceDetails .Top p span {
+  width: 6px;
+  height: 6px;
+  background-color: #d9d9d9;
+  border-radius: 50px;
+}
+
+.serviceDetails .ServiceDetails .description {
+  margin-top: 30px;
+}
+
+.serviceDetails .ServiceDetails .description h2 {
+  font-size: 30px;
+  line-height: 37px;
+  font-weight: 500;
+}
+
+.serviceDetails .ServiceDetails .description p {
+  font-size: 18px;
+  line-height: 37px;
+  margin-top: 11px;
+  color: #4a4a4a;
+}
+
+.serviceDetails .buttons {
+  display: flex;
+  margin-top: 40px;
+}
+
+.serviceDetails .buttons button {
+  width: 138px;
+  height: 46px;
+  border-radius: 8px;
+  font-size: 16px;
+  line-height: 20px;
+  color: white;
+  border: 0;
+  background: var(--main-red-color);
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+.serviceDetails .buttons button:hover {
+  background: transparent;
+  border: 1px solid var(--main-red-color);
+  color: var(--main-red-color);
+}
+
+.serviceDetails .buttons button:nth-child(2) {
+  width: 48px;
+  height: 48px;
+  background: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 8px;
+}
+
+.serviceDetailsBottom {
+  margin-top: 86px;
+  width: 1640px;
+}
+
+.serviceDetailsBottom .jobs.services {
+  display: flex;
+  grid-template-columns: repeat(5, 1fr);
+  flex-wrap: wrap;
+  grid-gap: 2%;
+  justify-content: flex-start;
+  row-gap: 35px;
+}
+
+.serviceDetailsBottom .services .service .Top {
+  display: block !important;
+}
+
+.serviceDetailsBottom .services .service .Top img {
+  height: 243px !important;
+  width: 100% !important;
+  border-bottom-left-radius: 0 !important;
+  border-bottom-right-radius: 0 !important;
+}
+
+.serviceDetailsBottom .services .service {
+  width: 18%;
+  padding: 0 !important;
+}
+
+.serviceDetailsBottom .services .service .rating {
+  margin-bottom: 8px;
+  height: 9px;
+  display: flex;
+}
+
+.serviceDetailsTop .shop-category-heading-top h2 {
+  display: none;
+}
+
+.serviceDetailsBottom .services .service .rating img {
+  height: 9px;
+}
+
+.serviceDetailsBottom .services .service h2.job-name {
+  font-size: 16px;
+  line-height: 20px;
+  color: #374856;
+  font-weight: 400;
+}
+
+.serviceDetailsBottom .services .service .title {
+  padding: 24px 0 14px 16px;
+}
+
+.serviceDetailsBottom .services .service .title p {
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.serviceDetailsBottom .services .service button {
+  width: 101px;
+  height: 38px;
+  background: var(--main-red-color);
+  color: white;
+  border: 0;
+  border-radius: 7px;
+  margin-left: 16px;
+  margin-bottom: 24px;
+}
+
+.serviceDetailsBottom .jobs .job {
+  border: 1px solid #ccc;
+  padding: 38px 33px 23px 26px;
+  border-radius: 19px;
+}
+
+.serviceDetailsBottom .jobs .job .Top {
+  display: flex;
+  gap: 16px;
+  align-items: center;
+}
+
+.serviceDetailsBottom .jobs .job .Top img {
+  width: 84px;
+  height: 84px;
+  border-radius: 11px;
+  object-fit: cover;
+}
+
+.serviceDetailsBottom .jobs .job a {
+  text-decoration: none;
+}
+
+.serviceDetailsBottom .jobs .job .job-name {
+  cursor: pointer;
+  font-size: 25px;
+  line-height: 31px;
+  color: #000000;
+  font-weight: 600;
+}
+
+.serviceDetailsBottom .jobs .job p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #6f6f6f;
+  margin-top: 8px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+}
+
+.serviceDetailsBottom .jobs .job p span {
+  display: flex;
+  width: 6px;
+  height: 6px;
+  border-radius: 50px;
+  background: #d9d9d9;
+}
+
+.serviceDetailsBottom .jobs .job .jobType {
+  display: flex;
+  margin-top: 24px;
+}
+
+.serviceDetailsBottom .jobs .job .jobType p {
+  font-size: 16px;
+  line-height: 20px;
+  color: #5e5e5e;
+  padding: 10px 12px;
+  border-radius: 5px;
+  background: #f8f8f8;
+}
+
+.serviceDetailsBottom .jobs .job .jobType p:nth-child(2) {
+  min-width: 114px;
+  background: #fce3e9;
+  color: var(--main-red-color);
+  margin-left: 7px;
+  display: flex;
+  justify-content: center;
+}
+
+.serviceDetailsBottom .jobs .job p.job-description {
+  font-size: 16px;
+  line-height: 29px;
+  color: #000000;
+  margin-top: 24px;
+}
+
+.serviceDetailsBottom .jobs .job p.postTime {
+  font-size: 14px;
+  line-height: 17px;
+  color: #a3a3a3;
+  margin-top: 23px;
+}
+
+@media screen and (max-width: 1710px) {
+  .serviceDetailsBottom .jobs.services {
+    grid-template-columns: repeat(5, 1fr) !important;
+  }
+
+  .serviceDetailsBottom .topHeading,
+  .serviceDetailsBottom .jobs.services {
+    width: 100% !important;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .wrapper.serviceDetails {
+    padding: 0;
+    width: 95% !important;
+  }
+
+  .serviceDetailsBottom .services .service {
+    /* width: 100%; */
+  }
+
+  .serviceDetails .left img {
+    width: 665px;
+  }
+}
+
+/* @media screen and (max-width : 1710px) { */
+@media screen and (max-width: 1640px) {
+  .serviceDetailsBottom {
+    padding: 0 !important;
+  }
+
+  .serviceDetailsBottom .topHeading {
+    width: 100%;
+  }
+
+  .serviceDetailsBottom .jobs.services {
+    gap: 2%;
+    width: 100%;
+  }
+
+  .serviceDetailsBottom .services .service {
+    /* width: 23.5%; */
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .serviceDetails .left img {
+    width: 560px;
+  }
+
+  .wrapper.serviceDetails {
+    /* width: 1250px !important; */
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .serviceDetailsBottom,
+  .wrapper.serviceDetails {
+    width: 95% !important;
+    gap: 20px;
+  }
+
+  .wrapper.serviceDetails .ServiceDetails,
+  .wrapper.serviceDetails .left {
+    width: 49%;
+  }
+
+  .wrapper.serviceDetails .left img {
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .serviceDetailsBottom .services {
+    justify-content: center;
+  }
+
+  .serviceDetailsBottom .services .service {
+    width: 32% !important;
+  }
+
+  .serviceDetailsBottom .jobs.services {
+    justify-content: center;
+  }
+
+  .wrapper.serviceDetails {
+    padding: 0 !important;
+  }
+
+  .serviceDetails .ServiceDetails .description h2,
+  .serviceDetails .ServiceDetails .Top h2 {
+    font-size: 22px;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .serviceDetailsBottom .services .service {
+    /* width: 23% !important; */
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .serviceDetailsBottom .services .service {
+    width: 32% !important;
+  }
+
+  .serviceDetailsBottom .services .service .Top img {
+    height: 162px !important;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .wrapper.serviceDetails {
+    flex-direction: column;
+  }
+
+  .wrapper.serviceDetails .ServiceDetails,
+  .wrapper.serviceDetails .left {
+    width: 100%;
+  }
+
+  .serviceDetailsBottom .topHeading {
+    align-items: center;
+  }
+
+  .serviceDetailsBottom .topHeading h2 {
+    font-size: 25px !important;
+    line-height: 26px;
+    font-weight: 600;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .serviceDetailsBottom .services .service {
+    width: 49% !important;
+  }
+
+  .wrapper.serviceDetailsTop {
+    margin: 26px 16px 42px 16px !important;
+  }
+
+  .serviceDetailsTop .shop-category-heading-top {
+    display: block !important;
+    margin: 0 !important;
+  }
+
+  .serviceDetailsTop .shop-category-heading-top h2 {
+    font-size: 26px;
+    line-height: 32px;
+    display: block;
+    font-weight: 600;
+    margin-bottom: 6px;
+  }
+
+  .wrapper.serviceDetails .left img {
+    height: 343px;
+  }
+
+  .wrapper.serviceDetails {
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .serviceDetails .ServiceDetails .description h2 {
+    font-size: 22px;
+    line-height: 22px;
+  }
+
+  .serviceDetails .ServiceDetails .description p {
+    font-size: 16px;
+    line-height: 22px;
+  }
+
+  .serviceDetails .buttons button:nth-child(2) {
+    height: 39px;
+  }
+
+  .serviceDetailsBottom .topHeading button,
+  .serviceDetails .buttons button {
+    width: 117px;
+    height: 39px;
+    border-radius: 4px;
+    font-size: 16px;
+  }
+}
+
+@media screen and (max-width: 450px) {
+  .serviceDetails .ServiceDetails .Top h2 {
+    font-size: 20px;
+    margin-top: 0;
+  }
+
+  .serviceDetails .ServiceDetails .Top {
+    position: relative;
+  }
+
+  .serviceDetails .ServiceDetails .Top .rating {
+    position: absolute;
+    top: 54px;
+  }
+
+  .serviceDetails .ServiceDetails .description {
+    margin-top: 26px;
+  }
+
+  .serviceDetails .ServiceDetails .description h2 {
+    font-size: 25px;
+  }
+
+  .serviceDetailsBottom .topHeading {
+    margin-bottom: 26px;
+    margin-top: 41px;
+  }
+
+  .wrapper.serviceDetails {
+    margin-bottom: 0 !important;
+  }
+
+  .serviceDetailsBottom .topHeading button {
+    padding: 0 !important;
+    height: max-content;
+    background: transparent;
+    color: var(--main-red-color);
+    text-decoration: underline;
+  }
+}
+
+@media screen and (max-width: 400px) {
+  .serviceDetailsBottom .services .service {
+    /* width: 100% !important; */
+  }
+
+  .serviceDetailsBottom .services .service .Top img {
+    height: 186px !important;
+  }
+}
+
+.serviceDetailsBottom ~ .load-more-btn-row {
+  margin-bottom: 20px;
+}

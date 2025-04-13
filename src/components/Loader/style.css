@@ -1,0 +1,56 @@
+.page-loader {
+    position: fixed;
+    width: 100px;
+    height: 100px;
+    top: 45%;
+    left: 45%;
+    z-index: 100000;
+}
+
+.page-loader::before,
+.page-loader::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: -45px;
+    width: inherit;
+    height: inherit;
+    border-radius: 50%;
+    animation: rotate 1000ms infinite cubic-bezier(0.77, 0, 0.175, 1);
+}
+
+.page-loader::before {
+    background-color: var(--main-red-color);
+}
+
+.page-loader::after {
+    background-color: var(--main-green-color);
+    animation-delay: 500ms;
+}
+
+@keyframes rotate {
+
+    0%,
+    100% {
+        translate: 90px 0;
+    }
+
+    25% {
+        scale: 0.3;
+    }
+
+    50% {
+        translate: 0;
+    }
+
+    75% {
+        scale: 1;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .page-loader {
+        width: 50px;
+        height: 50px;
+    }
+}

@@ -1,0 +1,289 @@
+.auction-card-component {
+    border-radius: 13.22px;
+    width: -webkit-fill-available !important;
+    margin: 0 10px;
+    background-color: #fff;
+    box-shadow: 0px 2.6440868377685547px 33.051082611083984px 0px #00000014;
+}
+
+.auction-card-component .auction-product-image {
+    width: 100%;
+    height: 176px;
+    border-radius: 13.22px 13.22px 0 0;
+}
+
+.auction-card-component .QuickView {
+    left: 15px;
+    top: 171px;
+    position: absolute;
+    color: white;
+    padding: 3px 10px;
+    background: #ff0000;
+    display: none;
+    font-size: 13px;
+    cursor: pointer;
+    border-radius: 10px;
+}
+
+.auction-card-component .cardTop {
+    position: relative;
+    height: 228px;
+}
+
+.auction-card-component .cardTop.has-video .product-video {
+    display: none;
+}
+
+.auction-card-component .cardTop.has-video:hover .lazy-load-image-background:nth-child(1) {
+    display: none !important;
+}
+
+.auction-card-component .cardTop.has-video:hover .product-image:nth-child(1) {
+    display: none !important;
+}
+
+.auction-card-component .cardTop.has-video:hover .product-video {
+    display: block;
+}
+
+.auction-card-component .tooltip-container {
+    position: relative;
+    margin-left: -4px;
+    display: flex;
+}
+
+.auction-card-component .tooltip {
+    visibility: hidden;
+    background-color: rgba(0, 0, 0, 0.8);
+    color: white;
+    text-align: center;
+    padding: 5px 10px;
+    border-radius: 6px;
+    font-size: 12px;
+    white-space: nowrap;
+    position: absolute;
+    z-index: 1;
+    left: 50%;
+    transform: translateX(-50%);
+    bottom: 100%;
+    margin-bottom: 5px;
+    opacity: 0;
+    transition: opacity 0.3s;
+}
+
+.auction-card-component .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: rgba(0, 0, 0, 0.8) transparent transparent transparent;
+}
+
+.auction-card-component .tooltip-container:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+}
+
+.auction-card-component:hover .auction-product-image {
+    filter: brightness(40%);
+}
+
+.auction-card-component .QuickView {
+    bottom: 40px;
+    top: unset;
+}
+
+.auction-card-component:hover .QuickView {
+    display: block;
+}
+
+.auction-card-component .product-feature-single-store-name-row {
+    display: flex;
+}
+
+.auction-card-component .product-feature-single-store-name-row div {
+    display: flex;
+}
+
+.auction-card-component .auction-product-action-bid {
+    background-color: #37485608;
+    border: 1px solid #37485633;
+    margin: 10px 0 0 0;
+    padding: 8px 10px;
+    border-radius: 6px;
+}
+
+.auction-card-component .auction-product-action-bid div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.auction-product-action-bid div:first-child {
+    margin-bottom: 6px;
+}
+
+.auction-card-component .auction-product-price {
+    color: #374856 !important;
+}
+
+.auction-card-component .auction-product-action-bid div p:first-child {
+    color: #374856;
+}
+
+.auction-card-component .auction-product-action-bid div p:last-child {
+    color: #ff0000;
+}
+
+
+.auction-card-component .product-feature-single-store-name-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 0 0 5px 0;
+}
+
+.auction-card-component .product-feature-single-store-name {
+    font-size: 12px;
+    font-weight: 400;
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    gap: 2px;
+    color: #374856;
+}
+
+.auction-card-component .product-feature-single-product-name {
+    font-size: 16px;
+    font-weight: 600;
+    text-decoration: none;
+    cursor: pointer;
+    color: var(--main-green-color);
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.auction-card-component .product-feature-single-price {
+    display: flex;
+    justify-content: space-between;
+    position: relative;
+    padding: 10px 0 0;
+    width: 100%;
+}
+
+.auction-card-component .product-feature-single-price div {
+    display: flex;
+    align-items: center;
+}
+
+.auction-card-component .product-feature-single-price-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.auction-card-component .product-feature-single-discounted-price {
+    color: #374856;
+    text-decoration: line-through;
+    font-size: 13px;
+    font-weight: 400;
+    margin-right: 5px;
+}
+
+.auction-card-component .product-feature-single-original-price {
+    color: var(--main-red-color);
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.auction-card-component .product-feature-days-left {
+    color: #ff0000;
+    font-size: 16px;
+    font-weight: 400;
+}
+
+.bottomText {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    background: #3f7b4b;
+    color: white;
+    font-size: 14px;
+    height: 26px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.auction-card-component .product-feature-single-store-name-row .views-count {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.auction-card-component .product-feature-single-store-name-row .views-count .view-icon {
+    width: 18px;
+    height: 18px;
+}
+
+.auction-card-component .product-feature-single-store-name-row .views-count .view-count {
+    font-size: 12px;
+}
+
+@media screen and (max-width: 1800px) {
+    .auction-card-component {
+        width: 97% !important;
+    }
+
+    .auction-product-image {
+        width: 100%;
+        object-fit: cover;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .product-card-component .tooltip {
+        transform: translateX(-7%);
+    }
+
+    .product-card-component .tooltip::after {
+        left: 5%;
+    }
+}
+
+@media screen and (max-width: 550px) {
+    .auction-product-action-bid p {
+        font-size: 12px;
+    }
+
+    .auction-card-component {
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 500px) {
+
+    .auction-card-component .auction-product-image {
+        width: 100%;
+    }
+
+    .auction-card-component .product-feature-single-original-price {
+        font-size: 14px;
+    }
+
+    .auction-card-component .product-feature-single-store-name-row>p {
+        font-size: 12px;
+    }
+
+    .auction-card-component .product-feature-single-product-name {
+        font-size: 14px;
+    }
+}

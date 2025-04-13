@@ -1,0 +1,22 @@
+.section-heading {
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 45.36px;
+    color: #374856;
+}
+
+@media screen and (max-width: 768px) {
+    .section-heading {
+        font-size: 25px;
+        line-height: 1.2;
+    }
+}
+
+@media screen and (max-width: 500px) {
+    .section-heading {
+        font-size: 20px;
+        line-height: 1.2;
+        display: flex;
+        align-items: center;
+    }
+}

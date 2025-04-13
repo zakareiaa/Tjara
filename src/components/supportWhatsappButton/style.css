@@ -1,0 +1,35 @@
+.footer-fixed-support-buttons {
+  position: fixed;
+  bottom: 5%;
+  right: 2%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  z-index: 10000000000;
+}
+
+.footer-fixed-support-buttons a {
+  width: 70px;
+  height: 70px;
+}
+
+.footer-fixed-support-buttons a img {
+  width: 100%;
+  height: auto;
+  transition: all 0.3s;
+}
+
+.footer-fixed-support-buttons a:hover img {
+  transform: scale(1.3);
+}
+
+@media screen and (max-width: 768px) {
+  .footer-fixed-support-buttons {
+    bottom: 10%;
+  }
+
+  .footer-fixed-support-buttons a {
+    width: 45px;
+    height: 45px;
+  }
+}

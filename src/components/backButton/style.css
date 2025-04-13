@@ -1,0 +1,28 @@
+.back-button {
+  display: none;
+  position: fixed;
+  bottom: 95px;
+  left: 15px;
+  z-index: 100;
+}
+
+.back-button .back-btn {
+  background: #fff;
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  padding: 0;
+  display: flex;
+  z-index: 1000000;
+}
+
+.back-button .back-btn svg {
+  width: 35px;
+  height: 35px;
+}
+
+@media screen and (max-width: 750px) {
+  .back-button {
+    display: block;
+  }
+}

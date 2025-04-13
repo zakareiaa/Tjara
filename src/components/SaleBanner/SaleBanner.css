@@ -1,0 +1,127 @@
+.sale-banner {
+  position: relative;
+  height: 281px;
+  margin: 60px 0;
+}
+
+.sale-banner-bg {
+  width: calc(100% - 240px);
+  height: 100%;
+  object-fit: cover;
+  border-radius: 25px;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+}
+
+.sale-banner-front {
+  height: 280px;
+  width: 16%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 2;
+}
+
+/* RESPONSIVENESS STARTED */
+
+@media screen and (max-width: 1700px) {
+  .sale-banner {
+    width: 100% !important;
+  }
+}
+
+@media screen and (max-width: 1400px) {
+  .sale-banner {
+    height: 235px;
+    padding: 0 50px !important;
+  }
+
+  .sale-banner-bg {
+    width: calc(100% - 100px);
+  }
+
+  .sale-banner-Container .slick-prev {
+    left: 100px !important;
+    top: 168px !important;
+  }
+
+  .sale-banner-Container .slick-next {
+    top: 168px !important;
+    right: 100px !important;
+  }
+
+  .sale-banner-front {
+    height: 100%;
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  .sale-banner-bg {
+    width: calc(100% - 100px);
+  }
+
+  .sale-banner-front {
+    width: auto;
+    max-width: 80%;
+    max-height: 100%;
+    object-fit: contain;
+  }
+}
+
+.sale-banner-Container .slick-dots {
+  display: flex;
+}
+
+@media screen and (max-width: 900px) {
+  .sale-banner {
+    margin: 0px 0px 50px 0px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .sale-banner-bg {
+    width: calc(100% - 40px);
+  }
+
+  .heroBannerContainer .slick-dots {
+    display: flex;
+  }
+
+  .heroBannerContainer .slick-dots li {
+    height: 10px;
+    border-radius: 100%;
+    width: 10px;
+    background: #EDEDED;
+  }
+
+  .heroBannerContainer .slick-dots li.slick-active {
+    background: #34A853;
+  }
+
+  .sale-banner {
+    margin-bottom: 0 !important;
+    margin-top: 0 !important;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .sale-banner-front {
+    width: 70%;
+  }
+
+  .slick-prev svg {
+    left: 160px;
+  }
+
+  .slick-next svg {
+    right: 160px;
+  }
+
+  .sale-banner-front {
+    max-height: 95%;
+    object-fit: contain;
+  }
+}

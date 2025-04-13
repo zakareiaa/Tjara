@@ -1,0 +1,297 @@
+.LeadGenerationModal {
+  display: none;
+  z-index: 111;
+  width: 100%;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  overflow: scroll;
+}
+
+.LeadGenerationModal.active {
+  display: block;
+  z-index: 1000000000000;
+}
+
+.LeadGenerationModal .background-transparent-layer {
+  width: 100vw;
+  height: 100vh;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                       Banner Modal Styles                                      */
+/* ---------------------------------------------------------------------------------------------- */
+.LeadGenerationModal button#leadGenModalCross {
+  /* position: absolute;
+  top: 1%;
+  right: 1%; */
+  border-radius: 5px;
+  color: var(--main-red-color);
+  border: none;
+  background: transparent;
+  padding: 0px;
+  z-index: 10;
+  cursor: pointer;
+  transition: all 0.5s ease-out;
+}
+
+.LeadGenerationModal button#leadGenModalCross:hover {
+  transform: scale(0.75);
+}
+
+/* .LeadGenerationModal .banner-modal-container {
+  width: max-content;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0px;
+  z-index: 5;
+  overflow: hidden;
+  display: flex;
+  box-shadow: 2px 2px 30px 2px var(--main-green-color), 2px 2px 32px 6px var(--main-red-color);
+} */
+
+.LeadGenerationModal .banner-modal-container {
+  width: max-content;
+  max-width: 90%; /* Ensures modal doesn't exceed the screen width */
+  max-height: 90vh; /* Ensures modal stays within viewport height */
+  position: fixed; /* Keeps modal within the viewport */
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 0px;
+  z-index: 1050;
+  overflow-y: auto; /* Enables scrolling if content is too large */
+  display: flex;
+  flex-direction: column;
+  box-shadow: 2px 2px 30px 2px var(--main-green-color), 
+              2px 2px 32px 6px var(--main-red-color);
+}
+
+/* Hide the text visually but keep it accessible for screen readers */
+.LeadGenerationModal .banner-modal-container .sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
+
+
+
+
+
+
+/* Add these styles to your LeadGenerationModal.css file */
+
+/* Minimized popup styles */
+.minimized-popup-container {
+  position: fixed;
+  bottom: 20px;
+  left: 20px;
+  z-index: 1000;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.minimized-popup-container .maximize-popup-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  background-color: #ffffff;
+  border: 1px solid #e0e0e0;
+  padding: 8px 16px;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.2s ease;
+  border-radius: 8px;
+}
+
+.minimized-popup-container .maximize-popup-btn:hover {
+  background-color: #f5f5f5;
+}
+
+/* Control buttons for minimize/close */
+.LeadGenerationModal .popup-controls {
+  display: flex;
+  justify-content: flex-end;
+  flex-direction: column;
+  padding: 8px;
+  position: absolute;
+  top: 0;
+  right: 0;
+  z-index: 10;
+}
+
+.LeadGenerationModal .popup-controls button {
+  background: rgba(255, 255, 255, 0.8);
+  border: none;
+  border-radius: 50%;
+  width: 28px;
+  height: 28px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  margin-left: 8px;
+  transition: all 0.2s ease;
+}
+
+.LeadGenerationModal .popup-controls button:hover {
+  background: rgba(255, 255, 255, 1);
+}
+
+.LeadGenerationModal .minimize-btn {
+  color: #555;
+}
+
+.LeadGenerationModal #leadGenModalCross {
+  color: #ff4d4f;
+}
+
+/* Adjust existing modal containers for new control buttons */
+.LeadGenerationModal .banner-modal-container,
+.LeadGenerationModal .login-modal-container {
+  position: relative;
+  /* padding-top: 10px; */
+}
+
+/* Animation for minimizing/maximizing */
+.LeadGenerationModal.active {
+  animation: fadeIn 0.3s ease forwards;
+}
+
+.minimized-popup-container {
+  animation: slideIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+/* Optional: add hover effect */
+.LeadGenerationModal .banner-modal-container .join-now-button {
+  position: absolute;
+  bottom: -16px;
+  left: 44%;
+  width: 60%;
+  transform: translate(-50%, -50%);
+  height: 60px;
+  background: transparent;
+  border-radius: 30px;
+  border-color: transparent;
+  cursor: pointer;
+}
+
+.LeadGenerationModal .banner-modal-container .join-now-button:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 25px;
+}
+
+.LeadGenerationModal .banner-modal-container img {
+  width: 100%; /* Full width of container */
+  height: 100vh; /* Full viewport height */
+  object-fit: cover;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                    Lead Capture Modal Styles                                   */
+/* ---------------------------------------------------------------------------------------------- */
+
+.LeadGenerationModal .lead-capture-modal {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff;
+  border-radius: 5px;
+  z-index: 5;
+  box-shadow: 2px 2px 30px 2px var(--main-green-color), 2px 2px 32px 6px var(--main-red-color);
+}
+
+.LeadGenerationModal .lead-capture-modal .sign-to-field-box input {
+  border: 1px solid #000;
+  border-radius: 3px;
+}
+
+/* ---------------------------------------------------------------------------------------------- */
+/*                                        Responsive Styles                                       */
+/* ---------------------------------------------------------------------------------------------- */
+
+@media (max-width: 768px) {
+  .LeadGenerationModal .banner-modal-container img {
+    height: 650px;
+  }
+
+  .LeadGenerationModal .banner-modal-container .join-now-button {
+    width: 58%;
+    transform: translate(-50%, -56%);
+    height: 50px;
+  }
+
+  .minimized-popup-container .maximize-popup-btn {
+    padding: 2px 0px;
+  }
+
+  .minimized-popup-container .maximize-popup-btn {
+    width: 40px;
+    height: 40px;
+  }
+
+  .minimized-popup-container {
+    bottom: 150px;
+    left: 15px;
+  }
+}
+
+@media (max-width: 430px) {
+  .LeadGenerationModal .banner-modal-container img {
+    height: 500px;
+  }
+}
+
+@media (max-width: 360px) {
+  .LeadGenerationModal .banner-modal-container img {
+    height: 400px;
+  }
+}

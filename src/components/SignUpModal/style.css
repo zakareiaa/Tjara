@@ -1,0 +1,95 @@
+.loginModal .sign-to-field-box .label-with-tooltip {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.loginModal .sign-to-field-box .tooltip-container {
+    position: relative;
+    display: flex;
+    cursor: help;
+    align-items: center;
+}
+
+.loginModal .sign-to-field-box .info-icon {
+    width: 16px;
+    height: 16px;
+    color: #94a3b8;
+    transition: color 0.2s ease;
+}
+
+.loginModal .sign-to-field-box .tooltip-container:hover .info-icon {
+    color: #475569;
+}
+
+.loginModal .sign-to-field-box .tooltip-text {
+    visibility: hidden;
+    position: absolute;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    padding: 8px 12px;
+    background-color: #1e293b;
+    color: white;
+    border-radius: 4px;
+    white-space: nowrap;
+    font-size: 12px;
+    z-index: 1000;
+    margin-bottom: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    min-width: 200px;
+    white-space: normal;
+    text-align: center;
+}
+
+/* Arrow at bottom of tooltip */
+.loginModal .sign-to-field-box .tooltip-text::after {
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #1e293b transparent transparent transparent;
+}
+
+.loginModal .sign-to-field-box .tooltip-container:hover .tooltip-text {
+    visibility: visible;
+}
+
+@media screen and (max-width: 550px) {
+    .SinginPopup .container {
+        width: 100%;
+        padding: 20px;
+        text-align: center;
+    }
+
+    .SinginPopup .container p {
+        width: auto !important;
+        font-size: 15px !important;
+        line-height: 19px !important;
+        text-align: center !important;
+    }
+
+    .SinginPopup .container .buttons {
+        flex-wrap: wrap !important;
+        justify-content: space-around;
+        gap: 12px !important;
+        width: 100%;
+    }
+
+    .SinginPopup .container .buttons button {
+        font-size: 20px;
+        display: flex;
+        gap: 15px;
+        justify-content: center;
+        align-items: center;
+        font-weight: 700;
+        align-items: center;
+        text-transform: uppercase;
+        background: transparent;
+        height: 50px;
+        width: 100%;
+    }
+}

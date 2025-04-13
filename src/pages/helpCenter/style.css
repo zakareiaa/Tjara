@@ -1,0 +1,286 @@
+.wrapper.help-and-center-section {
+  margin: unset !important;
+  padding: unset !important;
+  width: 100% !important;
+}
+
+.help-and-center-section .main {
+  width: 95%;
+  margin: 50px auto;
+  max-width: 1625px;
+}
+
+.help-and-center-section .main .bread-crumbs-heading {
+  margin-bottom: 46px;
+}
+
+.help-and-center-section .main .heading {
+  font-size: 40px;
+  line-height: 50px;
+  color: #374856;
+  margin-top: 34px;
+  font-weight: 600;
+}
+
+.help-and-center-section .main .accordions-sec {
+  display: flex;
+  justify-content: space-between;
+}
+
+.help-and-center-section .main .accordions-sec .accordians {
+  margin-top: 34px;
+  gap: 16px;
+  display: flex;
+  width: 49%;
+  flex-direction: column;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian {
+  width: 100%;
+  border-radius: 11px;
+  background: #f8f8f8;
+  padding: 21px 23px;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian:hover {
+  cursor: pointer;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian .accordianButton svg {
+  transition: all 0.3s;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian:hover .accordianButton svg {
+  transform: scale(1.4);
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian .accordianButton {
+  font-size: 20px;
+  line-height: 25px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian.active .accordianButton svg {
+  transform: rotate(180deg);
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian.active .accordianButton svg path {
+  fill: #34a853;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian.active .accordianButton {
+  font-weight: 500;
+  color: #34a853;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian .accordianBody {
+  display: none;
+  margin-top: 54px;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian .accordianBody img {
+  width: 100%;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian .accordianBody iframe {
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian.active .accordianBody {
+  display: flex;
+}
+
+.help-and-center-section .main .accordions-sec .accordians .accordian .accordianBody p {
+  font-size: 18px;
+}
+
+/* Contact Information Section */
+.help-and-center-section .main .contact-info-section {
+  display: flex;
+  justify-content: space-between;
+  gap: 30px;
+  margin: 50px 0;
+}
+
+.help-and-center-section .main .contact-card {
+  flex: 1;
+  background: #ffffff;
+  border: 1px solid #e0e0e0;
+  border-radius: 12px;
+  padding: 30px;
+  text-align: center;
+  transition: all 0.3s ease;
+}
+
+.help-and-center-section .main .contact-card:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-5px);
+}
+
+.help-and-center-section .main .contact-card .icon-container {
+  width: 60px;
+  height: 60px;
+  background: #f0f9f1;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.help-and-center-section .main .contact-card h3 {
+  font-size: 20px;
+  color: #374856;
+  margin-bottom: 15px;
+  font-weight: 600;
+}
+
+.help-and-center-section .main .contact-card p,
+.help-and-center-section .main .contact-card a {
+  color: #666;
+  margin: 5px 0;
+  font-size: 16px;
+  text-decoration: none;
+  transition: all 0.3s;
+  cursor: pointer;
+}
+
+.help-and-center-section .main .contact-card p:hover,
+.help-and-center-section .main .contact-card a:hover {
+  color: var(--main-red-color);
+}
+
+/* Map Section */
+.help-and-center-section .main .map-section {
+  margin: 50px 0;
+  border-radius: 15px;
+  overflow: hidden;
+}
+
+.help-and-center-section .main .map-section iframe {
+  width: 100%;
+  border-radius: 15px;
+}
+
+/* Responsive Styles for Contact and Map Sections */
+@media screen and (max-width: 768px) {
+  .help-and-center-section .main .contact-info-section {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .help-and-center-section .main .contact-card {
+    padding: 20px;
+  }
+
+  .help-and-center-section .main .contact-card .icon-container {
+    width: 50px;
+    height: 50px;
+    margin-bottom: 15px;
+  }
+
+  .help-and-center-section .main .contact-card h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+  }
+
+  .help-and-center-section .main .contact-card p {
+    font-size: 14px;
+  }
+
+  .help-and-center-section .main .map-section iframe {
+    height: 300px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .help-and-center-section .main .contact-info-section {
+    margin: 30px 0;
+  }
+
+  .help-and-center-section .main .map-section {
+    margin: 30px 0;
+  }
+
+  .help-and-center-section .main .map-section iframe {
+    height: 250px;
+  }
+}
+
+@media screen and (max-width: 1710px) {
+  .help-and-center-section .main .left,
+  .help-and-center-section .main .right {
+    width: 49%;
+  }
+}
+
+@media screen and (max-width: 1170px) {
+  .help-and-center-section .main .accordions-sec .accordians .accordian .accordianButton {
+    font-size: 18px;
+  }
+
+  .help-and-center-section .main .accordions-sec .accordians .accordian .accordianBody iframe {
+    border-radius: 15px;
+    overflow: hidden;
+    height: 240px;
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .help-and-center-section .main .accordions-sec .accordians .accordian .accordianBody {
+    margin-top: 30px;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .help-and-center-section .main .accordions-sec {
+    flex-direction: column;
+    justify-content: flex-start;
+  }
+
+  .help-and-center-section .main .accordions-sec .accordians {
+    width: 100%;
+  }
+
+  .help-and-center-section .main .accordions-sec .accordians:nth-child(2) {
+    margin-top: 16px;
+  }
+
+  .help-and-center-section .main .accordions-sec .accordians .accordian {
+    border-radius: 8px;
+  }
+}
+
+@media screen and (max-width: 550px) {
+  .help-and-center-section .main .accordions-sec .accordians .accordian {
+    padding: 16px;
+    margin-bottom: 10px;
+    border-radius: 6px;
+  }
+
+  .help-and-center-section .main .accordions-sec .accordians .accordian .accordianBody p,
+  .help-and-center-section .main .accordions-sec .accordians .accordian .accordianButton {
+    font-size: 16px;
+  }
+
+  .help-and-center-section .main .accordions-sec .accordians .accordian .accordianButton svg {
+    width: 12px;
+  }
+
+  .help-and-center-section .main .accordions-sec .accordians .accordian .accordianBody {
+    margin-top: 20px;
+  }
+
+  .help-and-center-section .main .accordions-sec.accordians {
+    flex-direction: column;
+    display: flex;
+    gap: 0;
+  }
+
+  .help-and-center-section .main .accordions-sec .accordians:nth-child(2) {
+    margin-top: 0;
+  }
+}

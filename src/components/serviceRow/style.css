@@ -1,0 +1,207 @@
+.service-row {
+  height: 80px;
+  background-color: rgba(210, 22, 66, 0.1);
+  /* padding: 0 259px; */
+}
+
+.service-row .container .service-row-item.bar .slick-slider {
+  margin-bottom: 2px;
+}
+
+.service-row .container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin: auto;
+  height: 100%;
+  width: 1640px;
+}
+
+.service-row .service-row-item {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+}
+
+/* RESPONSIVENESS STARTED */
+@media screen and (max-width: 1710px) {
+  .service-row .container {
+    width: 95%;
+  }
+}
+
+@media screen and (max-width: 1450px) {
+  .service-row {
+    height: 60px;
+  }
+
+  .service-row .service-row-item img {
+    height: 36px;
+    width: 36px;
+  }
+}
+
+@media screen and (max-width: 1250px) {
+  .service-row {
+    /* padding: 0px 160px; */
+  }
+}
+
+@media screen and (max-width: 1024px) {
+  .service-row {
+    /* padding: 0px 100px; */
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .service-row {
+    /* padding: 0px 30px; */
+  }
+
+  .service-row {
+    height: auto;
+    /* padding: 30px !important; */
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 40px;
+    background: #fff;
+  }
+
+  .service-row .service-row-item {
+    gap: 14px;
+    width: max-content;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .service-row .service-row-item img {
+    width: 50px;
+    height: 50px;
+  }
+}
+
+@media screen and (max-width: 500px) {
+  .service-row {
+    margin-bottom: 0 !important;
+  }
+
+  .service-row .container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0;
+    row-gap: 13px;
+    margin-bottom: 14px;
+  }
+
+  .service-row .container .slick-slider,
+  .service-row .container .service-row-item {
+    /* width: 50%; */
+    height: 68px;
+    background: #10f25e61;
+    border-radius: 0;
+  }
+
+  .service-row .container .service-row-item p {
+    font-size: 13px;
+  }
+
+  .service-row .container .service-row-item .slick-slider {
+    background: transparent;
+    height: auto;
+  }
+
+  .service-row .service-row-item img {
+    width: 30px;
+    height: 30px;
+    margin: 5px 15px 5px 5px;
+  }
+
+  .service-row .container .slick-slider {
+    border-radius: 0 10px 10px 0 !important;
+    overflow: hidden;
+  }
+
+  .service-row .container>.service-row-item:nth-child(1) {
+    border-radius: 10px 0 0 10px;
+    border-right: 1px solid rgba(0, 0, 0, 0.603);
+  }
+
+  .service-row .container .slick-slider svg circle,
+  .service-row .container .service-row-item svg circle {
+    fill: var(--main-green-color);
+  }
+
+  .service-row .service-row-item {
+    gap: 2px;
+  }
+
+  .service-row .container .slick-slider .service-row-item {
+    border-radius: 0 10px 10px 0 !important;
+    background: transparent;
+    justify-content: center;
+    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    width: 100%;
+  }
+
+  .service-row .container .service-row-item.bar {
+    width: 100%;
+    height: max-content;
+    flex-direction: row;
+    background: var(--main-green-color);
+    border-radius: 10px;
+    justify-content: flex-start;
+    gap: 0;
+  }
+
+  .service-row .container .service-row-item.bar svg circle {
+    fill: transparent;
+  }
+
+  .service-row .container .service-row-item.bar .slick-slider {
+    margin-left: auto;
+    margin-right: 10px;
+    direction: ltr;
+  }
+
+  .service-row .container .service-row-item.bar[dir="rtl"] {
+    justify-content: space-between;
+  }
+
+  .service-row .container .service-row-item.bar[dir="rtl"] .slick-slide p {
+    text-align: left;
+  }
+
+  .service-row .container .service-row-item.bar[dir="rtl"] .slick-slider {
+    margin-right: auto;
+    margin-left: 10px;
+    direction: rtl;
+  }
+
+  .service-row .container .service-row-item.bar p {
+    color: white;
+    font-size: 15px;
+    width: max-content !important;
+    text-wrap: nowrap;
+  }
+
+  .service-row .container .service-row-item.bar>p {
+    margin-left: -8px;
+  }
+
+  .service-row .container .service-row-item.bar[dir="rtl"]>p {
+    margin-left: 16px;
+  }
+
+  .service-row .container .service-row-item.bar .slick-slide p {
+    text-align: right;
+    width: 100% !important;
+  }
+
+  html {
+    overflow-x: hidden;
+  }
+}

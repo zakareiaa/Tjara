@@ -1,0 +1,203 @@
+.lightningProducts .feature-products-container {
+  padding-top: unset;
+}
+
+.lightningProducts .feature-products-items-container {
+  display: block;
+}
+
+.lightningProducts .simplebar-scrollbar:before {
+  background: rgba(128, 128, 128, 0.6);
+  border-radius: 50px;
+}
+
+.lightningProducts .simplebar-scrollbar:before {
+  background: #000 !important;
+}
+
+.lightningProducts .simplebar-track.simplebar-horizontal {
+  height: 7px !important;
+}
+
+.lightningProducts .feature-products-container-heading-row {
+  display: flex;
+  margin-top: 0 !important;
+  margin-bottom: 20px !important;
+}
+
+.lightningProducts .feature-products-container-heading-row .feature-product-heading-name {
+  margin-top: 0 !important;
+  display: flex;
+  align-items: center;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 45.36px;
+  color: #374856;
+}
+
+.lightningProducts .feature-products-container-heading-row .feature-product-heading-name svg {
+  width: 30px;
+  height: 30px;
+}
+
+.lightningProducts .feature-products-container-heading-row .feature-product-heading-name .timer {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+  background-color: #d32f2f;
+  padding: 5px 10px;
+  border-radius: 4px;
+}
+
+.lightningProducts .feature-products-container-heading-row .feature-product-heading-name .timer .timer-heading {
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+}
+
+.lightningProducts .feature-products-container-heading-row .feature-product-heading-name .timer .countdown {
+  display: flex;
+  align-items: stretch;
+  gap: 5px;
+}
+
+.swiper-free-mode>.swiper-wrapper {
+  transition-timing-function: linear !important;
+}
+
+.lightningProducts .feature-products-container-heading-row .feature-product-heading-name .timer .countdown .time-box {
+  width: 60px;
+  display: flex;
+  justify-content: center;
+  background-color: #fff;
+  border-radius: 4px;
+  color: #d32f2f;
+  font-size: 30px;
+  line-height: 40px;
+}
+
+.lightningProducts .feature-products-container-heading-row .feature-product-heading-name .timer .countdown .time-box small {
+  display: block;
+  font-size: 10px;
+  color: #666;
+}
+
+.lightningProducts .feature-products-container-heading-row .feature-product-heading-name .timer .countdown .seprator {
+  line-height: 36px;
+  color: #fff;
+}
+
+.lightningProducts .feature-products-container-heading-row p {
+  font-size: 20px;
+}
+
+.lightningProducts .feature-products-items-container .product {
+  min-width: 100%;
+  max-width: 100%;
+  cursor: pointer;
+}
+
+.lightningProducts .feature-products-items-container .product img {
+  width: 100%;
+  height: 120px;
+  border-radius: 8px;
+  object-fit: cover;
+  border: 1px solid var(--main-red-color);
+}
+
+.lightningProducts .feature-products-items-container .product .details {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 2px;
+}
+
+.lightningProducts .feature-products-items-container .product .details h2 {
+  font-size: 16px;
+  color: var(--main-red-color);
+  font-weight: 600;
+}
+
+.lightningProducts .feature-products-items-container .product .details p {
+  font-size: 14px;
+}
+
+@media screen and (max-width: 700px) {
+  .lightningProducts .feature-products-items-container {
+    flex-wrap: nowrap !important;
+    overflow: scroll;
+    gap: 2%;
+    margin-bottom: 10px;
+    margin-top: 10px;
+  }
+
+  .lightningProducts .feature-products-container-heading-row .feature-product-heading-name .timer {
+    display: none;
+  }
+
+  .lightningProducts .simplebar-scrollbar:before {
+    background: rgba(128, 128, 128, 0.6);
+    border-radius: 50px;
+  }
+
+  .lightningProducts .simplebar-scrollbar:before {
+    background: #000 !important;
+  }
+
+  .lightningProducts .simplebar-track.simplebar-horizontal {
+    height: 7px !important;
+  }
+
+  .lightningProducts .feature-products-container-heading-row {
+    display: flex;
+    margin-top: 0 !important;
+    margin-bottom: 0 !important;
+  }
+
+  .lightningProducts .feature-products-container-heading-row .feature-product-heading-name {
+    display: flex;
+    margin-top: 0 !important;
+    font-size: 16px;
+  }
+
+  .lightningProducts .feature-products-container-heading-row .feature-product-heading-name svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .lightningProducts .feature-products-container-heading-row p {
+    font-size: 20px;
+  }
+
+  .lightningProducts .feature-products-items-container .product {
+    min-width: 24vw;
+    max-width: 24vw;
+  }
+
+  .lightningProducts .feature-products-items-container .product img {
+    max-width: 100%;
+    max-height: 90px;
+    width: 100%;
+    min-height: 90px;
+    border-radius: 8px;
+    object-fit: cover;
+  }
+
+  .lightningProducts .feature-products-items-container .product .details {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 2px;
+  }
+
+  .lightningProducts .feature-products-items-container .product .details h2 {
+    font-size: 12px;
+    color: var(--main-red-color);
+    font-weight: 600;
+  }
+
+  .lightningProducts .feature-products-items-container .product .details p {
+    font-size: 10px;
+  }
+}

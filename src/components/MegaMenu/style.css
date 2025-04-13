@@ -1,0 +1,289 @@
+.mega-menu {
+    position: fixed;
+    top: 0;
+    left: -110%;
+    z-index: 9999999;
+    width: 100vw;
+    height: 100vh;
+}
+
+.mega-menu.active {
+    left: 0%;
+}
+
+.mega-menu .bg {
+    position: absolute;
+    width: 100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    background: linear-gradient(45deg, rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5));
+}
+
+.mega-menu .categories .category-name {
+    width: max-content !important;
+}
+
+.mega-menu .categories .category-arrow:hover {
+    transform: scale(1.45);
+}
+
+.mega-menu .categories .category-name:hover {
+    text-shadow: 0.5px 0.5px rgba(0.5, 0.5, 0.5, 0.5);
+}
+
+.mega-menu .categoriesDropdown .SubMenu,
+.mega-menu .categoriesDropdown h2,
+.mega-menu .categoriesDropdown p {
+    z-index: 1;
+    position: relative;
+}
+
+.mega-menu #categories-close-btn {
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.mega-menu #categories-close-btn:hover {
+    box-shadow: 1px 1px 1px black;
+    padding: 1.5px;
+}
+
+.mega-menu .categoriesDropdown {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    top: 0;
+    background: white;
+    z-index: 999999;
+    width: 300px;
+    left: -200%;
+    height: 100vh;
+    padding-top: 30px;
+    box-shadow: 0 5px 10px #0000003b;
+    transition: all .5s ease;
+}
+
+.mega-menu .categoriesDropdown .categories {
+    overflow: scroll;
+}
+
+.mega-menu .categoriesDropdown .categories::-webkit-scrollbar {
+    width: 5px;
+}
+
+.mega-menu .categoriesDropdown .categories::-webkit-scrollbar-thumb {
+    background-color: #ccc;
+    border-radius: 5px;
+}
+
+.mega-menu .categoriesDropdown.active {
+    left: 0;
+    transition: all .5s ease;
+}
+
+.mega-menu .categoriesDropdown .SubMenu::-webkit-scrollbar {
+    display: none;
+}
+
+.mega-menu .categoriesDropdown .SubMenu {
+    position: absolute;
+    display: flex;
+    padding-top: 30px;
+    box-shadow: 0 2px 2px #0000003b;
+    flex-direction: column;
+    background: white;
+    top: 0;
+    overflow: scroll;
+    left: -300%;
+    transition: all .5s ease;
+    width: 300px;
+    height: 100vh;
+}
+
+.mega-menu .categoriesDropdown .SubMenu .category-image {
+    width: 60px;
+    height: 60px;
+    border-radius: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--main-red-color);
+    border: 1px solid #37485633;
+    cursor: pointer;
+    margin-bottom: 5px;
+}
+
+.mega-menu .categoriesDropdown .SubMenu a {
+    font-size: 14px;
+}
+
+.mega-menu .categoriesDropdown .SubMenu div {
+    display: flex;
+    flex-wrap: wrap;
+    row-gap: 15px;
+}
+
+.mega-menu .categoriesDropdown .SubMenu.active {
+    left: 100%;
+    transition: all .5s ease;
+}
+
+.mega-menu .categoriesDropdown h2 {
+    color: black;
+    padding-left: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-right: 20px;
+    padding-bottom: 20px;
+    font-weight: 500;
+}
+
+.mega-menu .categoriesDropdown p,
+.mega-menu .categoriesDropdown a {
+    padding: 7px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: black;
+    display: flex;
+    align-items: center;
+}
+
+
+.mega-menu .categoriesDropdown p {
+    display: flex;
+    justify-content: space-between;
+    padding-right: 16px;
+    height: 52px;
+    border-bottom: 1px solid #F0F0F0;
+    cursor: pointer;
+    transition: .25s all;
+}
+
+.mega-menu .categoriesDropdown p:hover {
+    background: #F6F6F6;
+}
+
+.mega-menu .categoriesDropdown a {
+    width: 33%;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0;
+
+}
+
+.mega-menu .categoriesDropdown a img {
+    width: 60px;
+    height: 60px;
+    object-fit: contain;
+    border-radius: 60px;
+    background: #e9e9e9;
+}
+
+#mobile-side-categories .swiper-wrapper {
+    width: 858px;
+    max-width: 100%;
+    overflow: auto;
+    max-height: 80vh;
+    justify-content: space-evenly;
+    transform: unset !important;
+}
+
+#mobile-side-categories .swiper-wrapper .swiper-slide {
+    width: auto !important;
+    margin: 0 !important;
+}
+
+#mobile-side-categories .swiper-wrapper .swiper-slide .all-category-slider-single-item {
+    justify-content: center;
+}
+
+div#mobile-side-categories p {
+    display: block !important;
+    padding: 0 !important;
+    height: min-content !important;
+    border: 0 !important;
+    padding: 2px 0 10px 0 !important;
+}
+
+@media (max-width: 500px) {
+
+    .mega-menu .categoriesDropdown .SubMenu,
+    .mega-menu .categoriesDropdown {
+        width: 80vw;
+    }
+
+    .mega-menu .categoriesDropdown .categories {
+        height: 85vh;
+    }
+
+    .mega-menu .categoriesDropdown .SubMenu.active {
+        left: 0%;
+    }
+
+    /* .mega-menu .categoriesDropdown h2 {
+        font-size: 20px;
+    }
+
+    .mega-menu .categoriesDropdown h2,
+    .mega-menu .header-menu-browse-category-container>p {
+        display: none;
+    } */
+
+    /* .mega-menu .categoriesDropdown::-webkit-scrollbar {
+        display: none;
+    } */
+
+    /* .mega-menu .categoriesDropdown {
+        position: static;
+        height: 100% !important;
+        overflow: scroll;
+        width: -webkit-fill-available;
+        z-index: 0;
+        display: flex;
+        flex-direction: row;
+        background: transparent;
+        box-shadow: none;
+        color: white;
+        padding-top: 0;
+    }
+
+    .mega-menu .categoriesDropdown p {
+        color: white;
+        width: max-content;
+        min-width: max-content;
+        padding: 0;
+        margin: 0 10px;
+        height: auto;
+        border-bottom: 0;
+    } */
+
+    /* .mega-menu .categoriesDropdown p:hover {
+        background: transparent;
+    }
+
+    .mega-menu .categoriesDropdown p img {
+        display: none;
+    }
+
+    .mega-menu .categoriesDropdown a img {
+        width: 40px;
+        height: 40px;
+    }
+
+    .mega-menu .categoriesDropdown a {
+        font-size: 14px;
+    }
+
+    .mega-menu .categoriesDropdown h2 {
+        font-size: 18px;
+    } */
+
+    /* .mega-menu .categoriesDropdown p {
+        padding-top: 0;
+        padding-bottom: 0;
+    } */
+}
